@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Aime-La Plagne",
+    "nodeId": "aime_la_plagne",
+    "lat": 45.513,
+    "lon": 6.675,
+    "ele": 2100
+  },
+  {
+    "name": "Belle Plagne",
+    "nodeId": "belle_plagne",
+    "lat": 45.509,
+    "lon": 6.665,
+    "ele": 2050
+  },
+  {
+    "name": "Champagny",
+    "nodeId": "champagny",
+    "lat": 45.463,
+    "lon": 6.727,
+    "ele": 1250
+  },
+  {
+    "name": "Les Coches",
+    "nodeId": "les_coches",
+    "lat": 45.523,
+    "lon": 6.638,
+    "ele": 1450
+  },
+  {
+    "name": "Montalbert",
+    "nodeId": "montalbert",
+    "lat": 45.488,
+    "lon": 6.656,
+    "ele": 1350
+  },
+  {
+    "name": "Montchavin",
+    "nodeId": "montchavin",
+    "lat": 45.534,
+    "lon": 6.642,
+    "ele": 1250
+  },
+  {
+    "name": "Plagne 1800",
+    "nodeId": "plagne_1800",
+    "lat": 45.501,
+    "lon": 6.684,
+    "ele": 1800
+  },
+  {
+    "name": "Plagne Bellecote",
+    "nodeId": "plagne_bellecote",
+    "lat": 45.505,
+    "lon": 6.661,
+    "ele": 1930
+  },
+  {
+    "name": "Plagne Centre",
+    "nodeId": "plagne_centre",
+    "lat": 45.507,
+    "lon": 6.677,
+    "ele": 1970
+  },
+  {
+    "name": "Plagne Soleil",
+    "nodeId": "plagne_soleil",
+    "lat": 45.514,
+    "lon": 6.662,
+    "ele": 2050
+  },
+  {
+    "name": "Plagne Villages",
+    "nodeId": "plagne_villages",
+    "lat": 45.513,
+    "lon": 6.668,
+    "ele": 2050
+  }
+]

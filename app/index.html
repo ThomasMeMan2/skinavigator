@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Ski Navigator - La Plagne</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Ski Navigator</h1>
+            <p class="subtitle">La Plagne</p>
+        </header>
+
+        <main>
+            <!-- Route Selection -->
+            <section class="card route-selection">
+                <div class="form-group">
+                    <label for="start-select">From</label>
+                    <div class="select-wrapper">
+                        <select id="start-select" disabled>
+                            <option value="">Loading...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="swap-btn" class="swap-button" title="Swap start and end" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/>
+                    </svg>
+                </button>
+
+                <div class="form-group">
+                    <label for="end-select">To</label>
+                    <div class="select-wrapper">
+                        <select id="end-select" disabled>
+                            <option value="">Loading...</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slope Filter -->
+            <section class="card slope-filter">
+                <label class="filter-label">Include slopes</label>
+                <div class="filter-toggles">
+                    <label class="toggle-pill green">
+                        <input type="checkbox" id="filter-green" checked>
+                        <span>Green</span>
+                    </label>
+                    <label class="toggle-pill blue">
+                        <input type="checkbox" id="filter-blue" checked>
+                        <span>Blue</span>
+                    </label>
+                    <label class="toggle-pill red">
+                        <input type="checkbox" id="filter-red" checked>
+                        <span>Red</span>
+                    </label>
+                    <label class="toggle-pill black">
+                        <input type="checkbox" id="filter-black" checked>
+                        <span>Black</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Find Route Button -->
+            <button id="find-route-btn" class="primary-button" disabled>
+                Find Route
+            </button>
+
+            <!-- Loading indicator -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <span>Calculating route...</span>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="error-message hidden"></div>
+
+            <!-- Route Results -->
+            <section id="route-results" class="hidden">
+                <!-- Route Summary -->
+                <div class="card route-summary">
+                    <h2>Route Summary</h2>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <span class="summary-value" id="summary-time">-</span>
+                            <span class="summary-label">Est. time</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-value" id="summary-distance">-</span>
+                            <span class="summary-label">Distance</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-value" id="summary-up">-</span>
+                            <span class="summary-label">Elevation up</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-value" id="summary-down">-</span>
+                            <span class="summary-label">Elevation down</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elevation Profile -->
+                <div class="card elevation-card">
+                    <h2>Elevation Profile</h2>
+                    <div class="canvas-container">
+                        <canvas id="elevation-canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Route Steps -->
+                <div class="card route-steps">
+                    <h2>Route Details</h2>
+                    <ol id="steps-list" class="steps-list"></ol>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Data based on La Plagne piste map 2025</p>
+        </footer>
+    </div>
+
+    <script src="js/graph.js"></script>
+    <script src="js/elevation-chart.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
